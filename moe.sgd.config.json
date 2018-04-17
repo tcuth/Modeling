@@ -1,0 +1,24 @@
+{
+    "num_to_sample": 1,
+    "mc_iterations": 1000,
+    "gp_historical_info": {
+        "points_sampled": [
+            ]
+        },
+    "domain_info": {
+        "dim": 3,
+        "domain_bounds": [
+            {"min": 0.0000001, "max": 1.0},
+            {"min": 0.0000001, "max": 1.0},
+            {"min": 0.0000001, "max": 1.0}
+            ]
+        },
+    "optimizer_info": {
+		"optimizer_type": "gradient_descent_optimizer",
+		"num_multistarts": 200,
+		"num_random_samples": 4000,
+		"optimizer_parameters": {
+			"gamma": 0.5
+		}
+	}
+}

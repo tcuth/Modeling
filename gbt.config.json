@@ -1,0 +1,27 @@
+{
+	"hyperparameters":
+	{
+			"learning_rate" : 0.01,
+			"n_estimators" : 2000,
+			"max_depth" : 7,
+			"subsample" : 0.5,
+			"min_samples_leaf" : 1
+	},
+	"options": 
+	{
+		"SCALE": false,
+		"K": 3,
+		"OUTPUT": "model.output.pkl",
+		"SEED": 8675309,
+		"Y_VAR": 2,
+		"X_VARS": "3",
+		"WEIGHTS" : null,
+		"CROSS_VALIDATE" : true,
+		"METRIC": "KS"
+	},
+	"data": 
+	{
+		"training":"training.psv", 
+		"test": "testing.psv"
+	}
+}

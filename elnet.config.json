@@ -1,0 +1,25 @@
+{
+	"hyperparameters":
+	{
+			"alpha" : 0.0000005,
+			"l1_ratio" : 0.256,
+			"eta" : 0.003162
+	},
+	"options": 
+	{
+		"SCALE": true,
+		"K": 3,
+		"OUTPUT": "reproduce.tommmy.output.pkl",
+		"SEED": 8675309,
+		"Y_VAR": 5,
+		"X_VARS": "6-914",
+		"WEIGHTS" : 4,
+		"CROSS_VALIDATE" : true,
+		"METRIC": "KS"
+	},
+	"data": 
+	{
+		"training":"modeling.all.credit.newrisk_train.psv", 
+		"test": "modeling.all.credit.newrisk_holdouts.psv"
+	}
+}
