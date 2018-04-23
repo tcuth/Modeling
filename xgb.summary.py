@@ -28,27 +28,19 @@ print "Created at: %s" % modelDict['creation_date']
 print "Model Type: %s" % modelDict['model_type']
 print "Model Description: %s" % modelDict['model_description']
 print "Number of features: %i" % len(modelDict['variables'])
-print "Columns in file used in modeling: %s" % modelDict['configuration']['options']['options']['X_VARS']
+print "Columns in file used in modeling: %s" % modelDict['configuration']['options']['options']['x_vars']
 print "Training Data: %s" % modelDict['training_data']
-if modelDict['testing_data']:
-	print "Test Data: %s" % modelDict['testing_data']
-else:
-	print "Test Data: None"
+print "Test Data: %s" % modelDict.get('test_data',None)
 print "Target: %s" % modelDict['target']
-print "Evaluation metric: %s" % modelDict.get('metric','KS')
-if modelDict['cv_ks']:
-	print "CV %s: %.3f" % (modelDict.get('metric','KS'), modelDict['cv_ks'])
-else:
-	print "CV %s: None" % modelDict.get('metric','KS')
-print "Training %s: %.3f" % (modelDict.get('metric','KS'), modelDict['train_ks'])
-if modelDict['test_ks']:
-	print "Test %s: %.3f" % (modelDict.get('metric','KS'), modelDict['test_ks'])
-else:
-	print "Test %s: None" % modelDict.get('metric','KS')
+print "Evaluation metric: %s" % modelDict.get('metric','error')
+print "Best iteration %i" % modelDict['best_iteration']
+print "CV %s: %.3f" % (modelDict.get('metric','error'), modelDict['cv_score'])
+print "Training %s: %.3f" % (modelDict.get('metric','error'), modelDict['train_score'])
+print "Test %s: %.3f" % (modelDict.get('metric','error'), modelDict['test_score'])
 print "Hyperparameters"
-print "\t Learning Rate: %.3f" % modelDict['params']['learning_rate']
-print "\t Max Depth: %i" % modelDict['params']['max_depth']
-print "\t Min Samples Leaf: %i" % modelDict['params']['min_samples_leaf']
-print "\t Number of Trees: %i" % modelDict['params']['n_estimators']
-print "\t Subsample Rate: %.3f" % modelDict['params']['subsample']
+print "\t Learning Rate: %.3f" % modelDict['parameters']['learning_rate']
+print "\t Max Depth: %i" % modelDict['parameters']['max_depth']
+print "\t Min Samples Leaf: %i" % modelDict['parameters']['min_samples_leaf']
+print "\t Number of Trees: %i" % modelDict['parameters']['n_estimators']
+print "\t Subsample Rate: %.3f" % modelDict['parameters']['subsample']
 
